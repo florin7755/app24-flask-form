@@ -26,7 +26,6 @@ class Form(db.Model):   # our database modul , create a table in data.db
     date = db.Column(db.Date)
     occupation = db.Column(db.String(80))
 
-
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
