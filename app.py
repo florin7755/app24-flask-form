@@ -7,7 +7,7 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 app.config["SECRET_KEY"] = "myapplication123"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"    #data.db will be create by flask
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"    # data.db will be create by flask
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SLL"] = True
@@ -18,9 +18,9 @@ db = SQLAlchemy(app)
 
 mail = Mail(app)
 
-class Form(db.Model):   #our database modul , create a table in data.db
+class Form(db.Model):   # our database modul , create a table in data.db
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(80))    # 80 charaters max
+    first_name = db.Column(db.String(80))    # 80 characters max
     last_name = db.Column(db.String(80))
     email = db.Column(db.String(80))
     date = db.Column(db.Date)
